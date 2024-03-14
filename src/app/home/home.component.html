@@ -1,0 +1,44 @@
+<!--<app-nav></app-nav>-->
+
+<p>home works!</p>
+<button (click)="loginService.logout()">Logout</button>
+
+<mat-slide-toggle  [checked]="true">Slide me!</mat-slide-toggle>
+
+<input [(ngModel)]="isVisible" type="checkbox" id="visibleCbx">
+<label for="visibleCbx">Visible</label>
+<div *ngIf="isVisible" id="feltetelesenLatszik">
+    <p>Ez itt most feltételesen látszik</p>
+</div>
+
+<form>
+
+    <label  for="addName">Név: </label>
+    <input [(ngModel)]="formValues.name" name="asd" type="text" id="addName">
+    <label for="addQuantity">Mennyiség:</label>
+    <input [(ngModel)]="formValues.quantity" name="quantity" type="number" id="addQuantity">
+    <label for="addColor">Szín:</label>
+    <input [(ngModel)]="formValues.color" name="color" type="text" id="addColor">
+    <button (click)="add()">Add</button>
+</form>
+
+<div class="number" *ngFor="let num of numbers">
+    <p>{{num}}</p>
+
+</div>
+
+<table id="productsTable" *ngIf="products.length > 0">
+    <tr>
+        <th>Név</th>
+        <th>Mennyiség</th>
+        <th>Szín</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.color}}</td>
+            <td><button (click)="delete(product)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

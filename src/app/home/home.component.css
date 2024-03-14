@@ -1,0 +1,37 @@
+#feltetelesenLatszik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border: 1px solid black;
+}
+.number{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 20px;
+}
+.number:nth-child(even){
+    background-color: red;
+}
+.number:nth-child(odd){
+    background-color: blue;
+}
+
+#productsTable th, #productsTable td, #productsTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+#productsTable button{
+    background-color: red;
+    color: white;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
